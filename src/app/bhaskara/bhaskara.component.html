@@ -1,15 +1,14 @@
 <div id="bloco">
-    <h1>Bhaskara em Angular <i class = "pi pi-calculator"></i></h1>
+    <h1>Bhaskara em Angular <i class="pi pi-calculator"></i></h1>
     <h2><strong>&Delta; = b² - 4.a.c</strong></h2>
-    <p><strong>Valor de A: </strong> <input [(ngModel)]="a" placeholder="Forneça um número" class="calculo"></p>
-    <p><strong>Valor de B: </strong> <input [(ngModel)]="b" placeholder="Forneça um número" class="calculo"></p>
-    <p><strong>Valor de C: </strong> <input [(ngModel)]="c" placeholder="Forneça um número" class="calculo"></p>
-    <p><input type="button" value="Calcular Delta" (click)="deltaCalc()" class="custom-button"></p>
-    <p>{{ resultMessage }}</p>
+    <p><strong>Valor de A: </strong> <input [(ngModel)]="a" (ngModelChange)="deltaCalc()" placeholder="Forneça um número" class="calculo"></p>
+    <p><strong>Valor de B: </strong> <input [(ngModel)]="b" (ngModelChange)="deltaCalc()" placeholder="Forneça um número" class="calculo"></p>
+    <p><strong>Valor de C: </strong> <input [(ngModel)]="c" (ngModelChange)="deltaCalc()" placeholder="Forneça um número" class="calculo"></p>
+    <p *ngIf="resultMessage" [innerHTML]="resultMessage"></p>
     
     <div *ngIf="IsVisible">
-        <p><input type="button" value="Calcular Raízes" (click)="calculateRoots()" class="custom-button"></p>
-        <p *ngIf="x1 !== null">O x' ou x1 vale: <strong>{{ x1 }}</strong></p>
-        <p *ngIf="x2 !== null">O x'' ou x2 vale: <strong>{{ x2 }}</strong></p>
+        <p>____________________________________________________</p>
+        <p>O x' ou x1 vale: <strong>{{ x1 }}</strong></p>
+        <p>O x'' ou x2 vale: <strong>{{ x2 }}</strong></p>
     </div>
 </div>
