@@ -1,0 +1,57 @@
+@import "primeicons/primeicons.css";
+
+#bloco{
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    width: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
+    margin-right: normal ;
+    margin-bottom: 10px;
+}
+
+
+.calculo {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 11pt;
+    width: calc(30% - 5px);
+}
+
+.custom-button {
+    border: 1px solid rgb(21, 107, 3);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    font-size: 18pt;
+    font-weight: bolder;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: rgb(58, 61, 58);
+    color: white;
+    cursor: pointer;
+}
+
+.custom-button:focus{
+    border-color: rgb(0, 0, 0);  /* Cor de borda ao focar */
+    background-color: #fff;  /* Fundo branco ao focar */
+    outline: none;  /* Remove o contorno padrão do navegador */
+}
+
+footer {
+    font-style: italic;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
